@@ -8,9 +8,9 @@ function movement(dt)
     end
 
     -- Acceleration / reverse
-    if love.keyboard.isDown("up") then
+    if love.keyboard.isDown("z") then
         rectangle.speed = math.min(rectangle.speed + rectangle.acceleration * dt, rectangle.topSpeed)
-    elseif love.keyboard.isDown("down") then
+    elseif love.keyboard.isDown("x") then
         rectangle.speed = math.max(rectangle.speed - rectangle.acceleration * dt, -rectangle.topSpeed / 2)
     else
         -- Apply friction when no key is pressed
@@ -35,7 +35,7 @@ function love.load()
     speed = 0,          --Base speed
     acceleration = 200, --Acceleration Value
     topSpeed = 300,
-    friction = 100,     -- Slowdown Value
+    friction = 150,     -- Slowdown Value
     rotation = 0,       -- in radians
     turnSpeed = 3       -- radians per second
 }
