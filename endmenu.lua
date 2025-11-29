@@ -49,11 +49,11 @@ function endmenu.mousepressed(x, y, button)
     local exitBtn    = endmenu.buttons.exit
 
     if mouseInButton(restartBtn, x, y) then
-        love.event.quit("restart")
+        return "restart"
     end
     
     if mouseInButton(exitBtn, x, y) then
-        love.event.quit()
+        return "exit"
     end
 end
 
